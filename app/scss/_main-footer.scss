@@ -1,0 +1,24 @@
+.main-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 120px;
+  margin-top: 50px;
+  opacity: 0.5;
+  &__text, &__link {
+    @include text-light(14px);
+    @include media-breakpoint-down(md) {
+      font-size: 12px;
+    }
+    @include media-breakpoint-down(xs){
+      padding-top: 10px;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    flex-flow: column nowrap;
+    min-height: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}

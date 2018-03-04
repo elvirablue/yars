@@ -1,0 +1,62 @@
+.form-main {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  color: #999;
+  text-align: left;
+  position: relative;
+  z-index: 1030;
+  .title, .subtitle {
+    display: block;
+    max-width: 250px;
+    @include text-light(18px);
+    line-height: 1.7;
+    text-transform: none;
+    color: #fff;
+    padding: 0;
+    margin: 0 0 20px;
+    text-align: inherit;
+  }
+  .subtitle {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #999;
+  }
+  .button {
+    margin: 50px auto 30px;
+    position: relative;
+    z-index: 1111;
+  }
+  @include media-breakpoint-down(md) {
+    z-index: 10;
+    max-width: 470px;
+    margin: 0 auto;
+    .title, .subtitle {
+      max-width: 100%;
+    }
+    .button {
+      margin-left: 0;
+    }
+    .user-input {
+      display: block;
+      max-width: 350px;
+      margin: 0;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    .title {
+      font-size: 16px;
+    }
+    .subtitle {
+      font-size: 13px;
+    }
+    .user-input {
+      max-width: 100%;
+    }
+  }
+
+}

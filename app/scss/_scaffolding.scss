@@ -1,0 +1,211 @@
+@mixin text-bold($size) {
+  font-family: 'circle-bold', Verdana, Geneva, sans-serif;
+  font-size: $size;
+}
+
+@mixin text-norm($size) {
+  font-family: 'circle-regular', Verdana, Geneva, sans-serif;
+  font-size: $size;
+}
+
+@mixin text-light($size) {
+  font-family: 'circle-regular', Verdana, Geneva, sans-serif;
+  font-size: $size;
+}
+
+@mixin text-museo($size) {
+  font-family: 'museo', Verdana, Geneva, sans-serif;
+  font-size: $size;
+}
+
+* {
+  box-sizing: border-box;
+  @include text-light(14px);
+  color: $color-text;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+}
+
+b, i, span, strong {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+body, html {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+
+}
+
+body {
+
+}
+
+h2 {
+  @include text-norm(32px);
+  line-height: 1.3;
+  color: $color-title;
+  text-transform: none;
+  text-align: center;
+  &.line-center,
+  &.line-left {
+    &:before {
+      content: '';
+      display: block;
+      margin: 0 auto 12px;
+      width: 50px;
+      height: 2px;
+      background-color: $color-text;
+    }
+  }
+  &.line-left {
+    &:before {
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 28px;
+    span {
+      font-size: 20px;
+    }
+    &.line-left:before {
+      margin-bottom: 20px;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 24px;
+    span {
+      font-size: 17px;
+    }
+    &.line-left:before {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  vertical-align: bottom;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tbody {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: underline;
+  color: $color-text;
+  transition: color ease 0.2s;
+  outline: none !important;
+}
+
+.link:hover,
+.link:active,
+.link.active {
+  color: #26272d;
+}
+
+.separator {
+  display: block;
+  height: 45px;
+  @include media-breakpoint-down(xs) {
+    height: 20px;
+  }
+}
+
+@mixin bg-img($size) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  .text-gray {
+    display: block;
+    padding-bottom: 10px;
+  }
+}
+
+.no-bg {
+  background-image: none;
+  background-color: #ffffff;
+}
+
+.bg-dark-gray {
+  background-color: #212020;
+}
+
+.modal {
+  &-content {
+    background-color: #1a1a1a;
+  }
+  &-header {
+    border: none;
+    .close {
+      padding: 8px;
+      outline: none !important;
+      span {
+        display: block;
+        width: 30px;
+        height: 30px;
+        font-size: 0;
+        background: url("../img/menu-close.svg") no-repeat center;
+        background-size: 17px;
+      }
+    }
+  }
+  &-body {
+    padding: 0 50px;
+
+    @include media-breakpoint-down(xs) {
+      padding: 0 20px;
+    }
+    .form-main {
+      max-width: 100%;
+      display: block;
+      padding: 0;
+      margin: 0 auto;
+      .title, .subtitle {
+        max-width: 100%;
+      }
+    }
+  }
+}
+

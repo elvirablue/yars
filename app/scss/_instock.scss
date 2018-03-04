@@ -1,0 +1,135 @@
+.instock {
+	display: block;
+	margin-bottom: 20px;
+	h2 {
+		margin-bottom: 35px;
+	}
+	
+	&__block {
+		width: 100%;
+	  	min-height: 230px;
+	  	padding: 30px 10px;
+	  	margin-top: 20px;
+	  	background-color: #fff;
+		text-align: center;
+		border: 1px solid #ebebeb;
+
+		@include media-breakpoint-down(lg) {padding: 30px 20px;}
+		@include media-breakpoint-down(sm) {}
+	}
+
+	&__img {
+		display: inline-block;
+		vertical-align: middle;
+		width: 315px;
+		height: auto;
+		text-align: left;
+		margin: 0;
+		padding-top: 20px;
+
+		img {
+			display: block;
+			margin: 0;
+			width: auto;
+			max-width: 275px;
+			height: auto;
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 23%;
+			img {width: 100%;}
+		}
+		@include media-breakpoint-down(sm) {
+			width: 250px;
+			display: block;
+			margin: 0 auto 20px;}
+	}
+
+	&__info {
+		display: inline-block;
+		vertical-align: middle;
+		width: 470px;
+		height: auto;
+		padding-left: 50px;
+		padding-right: 50px;
+		border-left: 1px solid #e2e1e1;
+		border-right: 1px solid #e2e1e1;
+		h3 {
+			@include text-norm(24px);
+			color: #26272d;
+			text-align: left;
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 45%;
+			padding-left: 20px;
+			padding-right: 20px;
+			}
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+			max-width: 400px;
+			display: block;
+			margin: 0 auto 20px;
+			padding-left: 0;
+			border-left: none;
+			border-right: none;
+			border-top: 1px solid #e2e1e1;
+			border-bottom: 1px solid #e2e1e1;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			h3 {
+				font-size: 20px;
+				text-align: center;
+			}
+		}
+
+
+	}
+
+	&__price {
+		display: inline-block;
+		vertical-align: middle;
+		width: 315px;
+		height: auto;
+		text-align: left;
+		padding-left: 40px;
+		padding-right: 20px;
+		.price {
+			padding: 15px 0 7px;
+		}
+		.link {
+			display: block;
+			text-align: inherit;
+			padding-top: 17px;
+		}
+		@include media-breakpoint-down(lg) {
+			width: 28%;
+			padding-left: 20px;
+		}
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+			max-width: 400px;
+			display: block;
+			margin: 0 auto 20px;
+			padding: 0;
+			text-align: center;
+		}
+	}
+}
+
+p.price {
+	display: block;
+	width: 100%;
+	@include text-norm(18px);
+	color: $color-text;
+	text-align: left;
+	span {
+		color: #26272d;
+	}
+	@include media-breakpoint-down(lg) {font-size: 16px; white-space: nowrap;}
+	@include media-breakpoint-down(sm) {
+		text-align: center;
+	}	
+
+}
+

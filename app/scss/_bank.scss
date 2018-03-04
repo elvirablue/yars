@@ -1,0 +1,89 @@
+.bank-bg {
+  min-height: 417px;
+  background: url("../img/bg-bank.jpg") no-repeat bottom center #000;
+  background-size: auto;
+  padding-bottom: 50px;
+}
+.bank {
+  .title {
+    @include text-norm(20px);
+    color: $color-text;
+    padding: 90px 0 45px;
+    @include media-breakpoint-down(xs) {
+      font-size: 18px;
+      padding: 50px 0 35px;
+    }
+  }
+  .col-lg-2, .col-md-4, .col-6 {
+     padding-right: 10px;
+     padding-left: 10px;
+   }
+  &__item {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto 20px;
+    height: 140px;
+    background-color: #1a1a1a;
+    transition: all .3s ease;
+    padding: 20px;
+    @include media-breakpoint-down(md) {
+      padding: 20px;
+    }
+    @include media-breakpoint-down(xs) {
+      height: 80px;
+      padding: 10px;
+    }
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include media-breakpoint-down(xs) {
+      height: 60px;
+    }
+    &.b1 {
+      background-image: url("../img/bank-sber-gray.png");
+      &:hover {
+        background-image: url("../img/bank-sber.png");
+      }
+    }
+    &.b2 {
+      background-image: url("../img/bank-gas-gray.png");
+      &:hover {
+        background-image: url("../img/bank-gas.png");
+      }
+    }
+    &.b3 {
+      background-image: url("../img/bank-vtb-gray.png");
+      &:hover {
+        background-image: url("../img/bank-vtb.png");
+      }
+    }
+    &.b4 {
+      background-image: url("../img/bank-gray.png");
+      &:hover {
+        background-image: url("../img/bank.png");
+      }
+    }
+    &.b5 {
+      background-image: url("../img/bank-alfa-gray.png");
+      &:hover {
+        background-image: url("../img/bank-alfa.png");
+      }
+    }
+    &.b6 {
+      background-image: url("../img/bank-moskva-gray.png");
+      &:hover {
+        background-image: url("../img/bank-moskva.png");
+      }
+    }
+  }
+}

@@ -1,0 +1,238 @@
+.main-header-bg {
+  background-color: #212020;
+  min-height: 121px;
+  @include media-breakpoint-down(md) {
+    min-height: 57px;
+  }
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  @include media-breakpoint-down(md) {
+    padding-left: 80px;
+    height: 57px;
+  }
+  &__address,
+  &__phone {
+    @include text-museo(12px);
+    color: #fff;
+    @include hover-focus-active {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  &__link {
+    @include text-museo(12px);
+    color: #fff;
+    opacity: 0.5;
+    text-decoration: underline;
+    transition: opacity .3s ease;
+    @include hover-focus-active {
+      color: #fff;
+      opacity: 1;
+    }
+  }
+  &__phone {
+    position: relative;
+    z-index: 11111;
+    @include text-museo(16px);
+    text-decoration: none;
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+    }
+    &#phone {
+      opacity: 0;
+      @include media-breakpoint-down(lg) {
+        margin-right: 50px;
+      }
+    }
+  }
+  &__logo {
+    width: 100px;
+    @include media-breakpoint-down(xs) {
+      width: 80px;
+    }
+  }
+}
+
+.r-block {
+  width: 530px;
+  flex: 0 0 530px;
+  text-align: right;
+  @include media-breakpoint-down(lg) {
+    width: 420px;
+    flex: 0 0 420px;
+  }
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+.first-screen-bg {
+  background-color: #000;
+  @include media-breakpoint-down(md) {
+    background: url("../img/bg-fs.jpg") no-repeat #000;
+    background-position: center bottom;
+    background-size: cover;
+  }
+}
+
+.first-screen {
+  min-height: 800px;
+  @include bg-img(cover);
+  background-image: url("../img/bg-fs.png");
+  background-position: bottom center;
+  @include media-breakpoint-down(md) {
+    background-image: none;
+    height: 60vw;
+    min-height: 400px;
+  }
+  @include media-breakpoint-down(xs) {
+    min-height: 300px;
+    min-height: 300px;
+  }
+  .title {
+    max-width: 680px;
+    @include text-norm(56px);
+    font-weight: normal;
+    line-height: 1.2;
+    color: #fff;
+    padding: 150px 0 0;
+    @include media-breakpoint-down(lg) {
+      font-size: 50px;
+      max-width: 580px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 5vw;
+      padding-top: 8vw;
+      max-width: 100%;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 22px;
+      padding-top: 40px;
+    }
+  }
+  .subtitle {
+    @include text-light(20px);
+    color: #fff;
+    padding: 40px 0 0;
+    @include media-breakpoint-down(md) {
+      padding-top: 10vw;
+      font-size: 2.5vw;
+    }
+    @include media-breakpoint-down(xs) {
+      padding-top: 60px;
+      font-size: 12px;
+    }
+  }
+  .btn-down {
+    display: block;
+    position: absolute;
+    z-index: 1112;
+    bottom: 215px;
+    left: 40px;
+    @include text-light(12px);
+    line-height: 3;
+    color: #fff;
+    opacity: 0.6;
+    @include bg-img(auto);
+    background-image: url("../img/arr-down.png");
+    background-position: left center;
+    padding-left: 50px;
+    transform: rotate(-90deg);
+    cursor: pointer;
+    transition: opacity 0.1s ease;
+    &:hover {
+      color: #fff;
+      opacity: 1;
+    }
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+  }
+}
+
+.first-screen-form {
+  min-width: 600px;
+  width: 50vw;
+  height: auto;
+  background-color: #1a1a1a;
+  position: absolute;
+  z-index: 1010;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: 180px;
+  padding-top: 25px;
+  padding-left: 80px;
+  .form-main {
+    padding-top: 130px;
+  }
+  @include media-breakpoint-down(lg) {
+    margin-left: 150px;
+    padding-top: 25px;
+    padding-left: 20px;
+  }
+  @include media-breakpoint-down(md) {
+    position: static;
+    width: 100%;
+    min-height: 300px;
+    margin-left: 0;
+    z-index: 10;
+    .form-main {
+      padding-top: 50px;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    min-width: 280px;
+    padding: 20px;
+  }
+}
+
+.first-screen__block {
+  width: 300px;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  .phone {
+    display: block;
+    text-align: right;
+    padding-left: 30px;
+    @include text-bold(24px);
+    color: #fff;
+  }
+  .link {
+    display: block;
+    width: 100%;
+    text-align: right;
+    @include text-light(14px);
+    color: #999;
+    text-decoration: none;
+    transition: all .3s ease;
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
+
+.bg-cloud {
+  position: absolute;
+  bottom: 0px;
+  left: calc(-50vw - 180px);
+  z-index: 1020;
+  width: 100vw;
+  height: 351px;
+  @include bg-img(auto);
+  background-image: url("../img/bg-fs-cloud.png");
+  @include media-breakpoint-down(lg) {
+    left: calc(-50vw - 150px);
+  }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}

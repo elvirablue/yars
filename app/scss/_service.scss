@@ -1,0 +1,58 @@
+.service-bg {
+  min-height: 666px;
+  background: url("../img/bg-service.jpg") no-repeat bottom center #fff;
+  background-size: auto;
+  padding-bottom: 50px;
+  @include media-breakpoint-down(md) {
+    min-height: auto;
+  }
+  @include media-breakpoint-down(xs) {
+
+  }
+}
+
+.service {
+  text-align: left;
+  h2 {
+    padding: 80px 0 0;
+    @include media-breakpoint-down(xs) {
+      padding-top: 50px;
+    }
+  }
+  .text1 {
+    @include text-norm(24px);
+    color: $color-title;
+    padding: 50px 0 0;
+    width: 100%;
+    max-width: 650px;
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 17px;
+      text-align: center;
+      padding-top: 30px;
+    }
+  }
+  .text2 {
+    @include text-norm(16px);
+    color: $color-text;
+    padding: 70px 0 60px;
+    width: 100%;
+    max-width: 580px;
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 12px;
+      text-align: center;
+      padding: 40px 0;
+    }
+  }
+  .button {
+    margin: 0;
+    @include media-breakpoint-down(xs) {
+      margin: 0 auto;
+    }
+  }
+}

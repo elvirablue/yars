@@ -1,0 +1,48 @@
+table.table {
+	margin-top: 20px;
+	margin-bottom: 0;
+	width: 100%;
+
+	tr td {
+		border: none;
+		padding: 6px 0 0;
+	}
+
+	tr td:first-child {
+		min-width: 100px;
+		@include text-norm(12px);
+		text-align: left;
+		color: $color-text;
+	}
+
+	tr td:last-child {
+		min-width: 100px;
+		@include text-norm(12px);
+		text-align: right;
+		color: #26272d;
+		b {
+			@include text-bold(12px);
+		}
+	}
+}
+
+table.table--modal1 {
+	tr td {	
+		padding: 4px 0;		
+		font-size: 16px !important;
+		@include media-breakpoint-down(md) {
+			padding: 2px 0;
+			font-size: 12px !important;
+		}
+	}
+	tr td:last-child {font-size: 12px !important;}
+}
+
+table.table--modal2 {
+	tr td {		
+		padding: 3px 0;		
+		font-size: 12px !important;
+
+
+	}
+}

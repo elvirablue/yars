@@ -1,0 +1,24 @@
+.user-input {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  border: none;
+  border-bottom: 1px solid rgba(255 , 255, 255, 0.2);
+  background-color: transparent;
+  height: 57px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  color: #999;
+  @include text-light(15px);
+  line-height: 57px;
+  @include media-breakpoint-down(xs) {
+    height: 45px;
+    line-height: 45px;
+    font-size: 13px;
+  }
+}
+::-webkit-input-placeholder {color:#999;opacity: 1;}
+::-moz-placeholder          {color:#999;opacity: 1;}/* Firefox 19+ */
+:-moz-placeholder           {color:#999;opacity: 1;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#999;opacity: 1;}

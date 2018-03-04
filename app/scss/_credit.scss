@@ -1,0 +1,75 @@
+.credit-bg {
+  min-height: 565px;
+  background: url("../img/bg-credit.png") no-repeat bottom center;
+  background-size: auto;
+  @include media-breakpoint-down(md) {
+    min-height: auto;
+    background-size: 1100px;
+    padding-bottom: 50px;
+  }
+  @include media-breakpoint-down(xs) {
+    background-size: 900px;
+    padding-bottom: 150px;
+  }
+}
+
+.credit {
+  &__content {
+    display: block;
+    width: 100%;
+    max-width: 530px;
+    .text1 {
+      @include text-norm(24px);
+      line-height: 1.5;
+      padding: 50px 0 0;
+      color: $color-title;
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 17px;
+      }
+    }
+    .text2 {
+      display: inline-block;
+      width: auto;
+      @include text-bold(18px);
+      line-height: 1.5;
+      padding: 40px 0 0;
+      color: $color-title;
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0;
+        margin-top: 5px;
+        border-bottom: 2px solid $color-text;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 14px;
+      }
+    }
+    .text3 {
+      @include text-light(16px);
+      line-height: 1.5;
+      padding: 30px 0 0;
+      color: $color-text;
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+        width: 390px;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 12px;
+        width: auto;
+      }
+    }
+    .button {
+      margin-top: 50px;
+      margin-left: 0;
+      width: 280px;
+    }
+  }
+}

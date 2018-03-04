@@ -1,0 +1,116 @@
+.slider {
+  min-height: 750px;
+  &__title {
+    margin-top: 130px;
+    color: #fff;
+  }
+  @include media-breakpoint-down(lg) {
+    min-height: calc(100vw / 1.45);
+    padding-bottom: 80px;
+    &__title {
+      margin-top: 50px;
+    }
+  }
+  .owl-carousel {
+    display: block;
+    width: 770px;
+    height: 425px;
+    margin: 50px auto 0;
+    border-bottom: 1px solid transparent;
+
+    @include media-breakpoint-down(lg) {
+      width: 80vw;
+      height: calc(80vw / 1.75);
+      margin: 70px auto 0;
+      .owl-stage-outer {
+        height: calc(80vw / 1.75);
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      //width: 100%;
+    }
+    &-item {
+      width: 770px;
+      height: 425px;
+      overflow: hidden;
+      @include media-breakpoint-down(lg) {
+        width: 80vw;
+        height: calc(80vw / 1.75);
+      }
+      @include media-breakpoint-down(xs) {
+        //width: 100%;
+      }
+    }
+  }
+  .owl-carousel .owl-prev,
+  .owl-carousel .owl-next {
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    left: auto;
+    right: auto;
+    font-size: 0;
+    background-image: url(../img/arr.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    @include media-breakpoint-down(lg) {
+      top: -30px;
+    }
+    @include media-breakpoint-down(xs) {
+      transform: scale(0.85);
+
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .owl-carousel .owl-prev {
+    left: -180px;
+    background-image: url("../img/arr-prev.svg");
+    background-position: right center;
+    @include media-breakpoint-down(lg) {
+      left: -55px;
+    }
+
+  }
+  .owl-carousel .owl-next {
+    right: -180px;
+    background-image: url("../img/arr-next.svg");
+    background-position: left center;
+    @include media-breakpoint-down(lg) {
+      right: 0;
+    }
+    @include media-breakpoint-down(xs) {
+      right: -10px;
+    }
+
+  }
+
+  .owl-carousel .owl-dots {
+    width: 100%;
+    margin: 30px 0 100px;
+    display: block;
+    text-align: center;
+
+  }
+
+  .owl-carousel .owl-dot {
+    display: inline-block;
+    margin: 0 8px;
+    width: 16px;
+    height: 20px;
+    border-bottom: 2px solid #999;
+    opacity: 0.6;
+    transition: opacity ease 0.3s;
+  }
+
+  .owl-carousel .owl-dot.active {
+    opacity: 1;
+  }
+}
