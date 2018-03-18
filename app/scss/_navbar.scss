@@ -1,6 +1,7 @@
 .fixed-top {
   position: static;
   top: 0;
+  z-index: 1049;
   box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.4);
   transition: opacity 0.5s ease;
   @include media-breakpoint-down(md) {
@@ -87,6 +88,18 @@
       margin: 0 auto;
       padding: 40px 0 10px;
       text-align: center;
+    }
+  }
+  .navbar-collapse {
+    .main-header__link {
+      font-size: 14px;
+      text-decoration: none;
+      padding-left: 30px;
+      min-width: 200px;
+      display: inline-block;
+      @include media-breakpoint-down(lg) {
+        padding-right: 30px;
+      }
     }
   }
 

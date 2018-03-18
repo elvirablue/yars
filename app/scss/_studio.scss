@@ -1,0 +1,142 @@
+.studio-bg {
+  min-height: 915px;
+  background: url("../img/bg-studio.jpg") no-repeat bottom center #000;
+  background-size: auto;
+  padding-bottom: 50px;
+  padding-top: 120px;
+  @include media-breakpoint-down(md) {
+    min-height: auto;
+    padding-top: 40px;
+  }
+  @include media-breakpoint-down(xs) {
+
+  }
+}
+
+.studio {
+  &__title {
+    color: #fff;
+  }
+  .text1 {
+    display: block;
+    width: 770px;
+    margin: 0 auto;
+    @include text-norm(24px);
+    color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+      width: 80%;
+    }
+    @include media-breakpoint-down(xs) {
+      width: auto;
+      font-size: 17px;
+      padding-top: 30px;
+    }
+  }
+  .text2 {
+    display: block;
+    width: 860px;
+    margin: 0 auto;
+    @include text-norm(16px);
+    line-height: 1.5;
+    color: $color-text;
+    text-align: center;
+    padding-top: 40px;
+    @include media-breakpoint-down(md) {
+      width: 80%;
+      font-size: 14px;
+    }
+    @include media-breakpoint-down(xs) {
+      width: auto;
+      font-size: 12px;
+      padding: 40px 0 0;
+    }
+  }
+  .button {
+    margin-top: 75px;
+    border-color: #fff;
+    background-color: transparent;
+    color: #fff;
+    @include media-breakpoint-down(md) {
+      margin-top: 40px;
+    }
+  }
+
+  .icons-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+    @include media-breakpoint-down(md) {
+      flex-flow: row wrap;
+      margin-top: 50px;
+    }
+    .item {
+      margin: auto 30px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transition: 0.3s background ease;
+      @include media-breakpoint-down(lg) {
+        margin: auto 20px;
+      }
+      @include media-breakpoint-down(md) {
+        margin: 0 20px 20px;
+      }
+      &.icon-1 {
+        @include size(156px, 45px);
+        background-image: url("../img/studio-1-gray.png");
+        @include media-breakpoint-down(md) {
+          width: 110px;
+        }
+        &:hover {
+          background-image: url("../img/studio-1.png");
+        }
+      }
+      &.icon-2 {
+        @include size(175px, 29px);
+        background-image: url("../img/studio-2-gray.png");
+        @include media-breakpoint-down(md) {
+          width: 123px;
+        }
+        &:hover {
+          background-image: url("../img/studio-2.png");
+        }
+      }
+      &.icon-3 {
+        @include size(111px, 44px);
+        background-image: url("../img/studio-3-gray.png");
+        @include media-breakpoint-down(md) {
+          width: 78px;
+        }
+        &:hover {
+          background-image: url("../img/studio-3.png");
+        }
+      }
+      &.icon-4 {
+        @include size(151px, 35px);
+        background-image: url("../img/studio-4-gray.png");
+        @include media-breakpoint-down(md) {
+          width: 106px;
+        }
+        &:hover {
+          background-image: url("../img/studio-4.png");
+        }
+      }
+      &.icon-5 {
+        @include size(141px, 49px);
+        background-image: url("../img/studio-5-gray.png");
+        @include media-breakpoint-down(md) {
+          width: 99px;
+        }
+        &:hover {
+          background-image: url("../img/studio-5.png");
+        }
+      }
+    }
+  }
+
+}

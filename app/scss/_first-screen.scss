@@ -15,6 +15,16 @@
     padding-left: 80px;
     height: 57px;
   }
+  .phone {
+    display: inline-block;
+    text-align: right;
+    padding-left: 30px;
+    font-family: 'circle-bold', Verdana, Geneva, sans-serif;
+    font-size: 24px;
+    color: #fff;
+    background: url("../img/ico/i-phone-gray.svg") no-repeat left center;
+    background-size: 20px;
+  }
   &__address,
   &__phone {
     @include text-museo(12px);
@@ -33,6 +43,7 @@
     @include hover-focus-active {
       color: #fff;
       opacity: 1;
+      outline: none;
     }
   }
   &__phone {
@@ -73,6 +84,9 @@
 
 .first-screen-bg {
   background-color: #000;
+  background: url("../img/bg-fs-desc.jpg") no-repeat #000;
+  background-position: center top;
+  background-size: auto;
   @include media-breakpoint-down(md) {
     background: url("../img/bg-fs.jpg") no-repeat #000;
     background-position: center bottom;
@@ -82,9 +96,10 @@
 
 .first-screen {
   min-height: 800px;
-  @include bg-img(cover);
-  background-image: url("../img/bg-fs.png");
-  background-position: bottom center;
+  position: relative;
+ // @include bg-img(cover);
+ // background-image: url("../img/bg-fs.png");
+ // background-position: bottom center;
   @include media-breakpoint-down(md) {
     background-image: none;
     height: 60vw;
@@ -133,7 +148,7 @@
     position: absolute;
     z-index: 1112;
     bottom: 215px;
-    left: 40px;
+    right: 40px;
     @include text-light(12px);
     line-height: 3;
     color: #fff;
@@ -166,14 +181,17 @@
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: 180px;
+  margin-left: 1000px;
   padding-top: 25px;
   padding-left: 80px;
+  transition: margin-left 0.5s ease-in;
   .form-main {
     padding-top: 130px;
+    position: relative;
+    z-index: 1030;
   }
   @include media-breakpoint-down(lg) {
-    margin-left: 150px;
+    //margin-left: 150px;
     padding-top: 25px;
     padding-left: 20px;
   }
@@ -181,7 +199,7 @@
     position: static;
     width: 100%;
     min-height: 300px;
-    margin-left: 0;
+    margin-left: 0!important;
     z-index: 10;
     .form-main {
       padding-top: 50px;
@@ -200,10 +218,15 @@
   }
   .phone {
     display: block;
+    width: 222px;
+    margin-right: 0;
+    margin-left: auto;
     text-align: right;
     padding-left: 30px;
     @include text-bold(24px);
     color: #fff;
+    background: url("../img/ico/i-phone-gray.svg") no-repeat left center;
+    background-size: 20px;
   }
   .link {
     display: block;
@@ -222,15 +245,28 @@
 
 .bg-cloud {
   position: absolute;
-  bottom: 0px;
-  left: calc(-50vw - 180px);
+  top: 570px;
+  left: 0;
+  bottom: 0;
   z-index: 1020;
   width: 100vw;
-  height: 351px;
-  @include bg-img(auto);
+  height: 355px;
+  @include bg-img(cover);
   background-image: url("../img/bg-fs-cloud.png");
+  background-position: center bottom;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.button.fs {
+  position: absolute;
+  top: 600px;
+  left: 50%;
+  margin-left: -580px;
+  z-index: 1030;
   @include media-breakpoint-down(lg) {
-    left: calc(-50vw - 150px);
+    margin-left: -48%;
   }
   @include media-breakpoint-down(md) {
     display: none;

@@ -20,7 +20,7 @@
 @import "service";
 @import "contact-map";
 @import "main-footer";
-//@import "blocks/format.less";
+@import "studio";
 //@import "blocks/bottom-btn.less";
 //
 //@import "blocks/modal.less";
@@ -40,6 +40,7 @@ body {
 	height: 100%;
 	box-sizing: border-box;	
 	min-height: 100vh;
+	padding-bottom: 170px;
 }
 .container-fluid {
 	max-width: 1200px;

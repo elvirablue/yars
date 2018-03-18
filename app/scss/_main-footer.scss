@@ -1,10 +1,21 @@
-.main-footer {
+
+.container-fluid.foter {
+  margin-top: -120px;
+  @include media-breakpoint-down(md) {
+    margin-top: -170px;
+    margin-bottom: 120px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-top: -140px;
+    margin-bottom: 0;
+  }
+}.main-footer {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   min-height: 120px;
-  margin-top: 50px;
   opacity: 0.5;
   &__text, &__link {
     @include text-light(14px);

@@ -19,6 +19,7 @@
 
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
     <script type="text/javascript" src="owlcarousel/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -51,7 +52,9 @@
                     <div class="d-none d-sm-block main-header__address">г. Новосибирск, ул. Кубановская 1/1</div>
                     <a href="#link4" class="d-none d-lg-block main-header__link">Смотреть на карте</a>
                     <a href="tel:+79131234578" class="d-block d-lg-none main-header__phone">+7 (913) 123-45-78</a>
-                    <div class="d-none d-lg-block r-block"></div>
+                    <div class="d-none d-lg-block r-block">
+                        <div class="phone">+7 (913) 123-45-78</div>
+                    </div>
                 </div>
                 <nav class="navbar fixed-top navbar-expand-lg">
                     <div class="container-fluid">
@@ -84,6 +87,8 @@
                             </ul>
                             <div class="d-none d-lg-block r-block">
                                 <a href="tel:+79131234578" class="main-header__phone" id="phone">+7 (913) 123-45-78</a>
+                                <a href="#" class="main-header__link" data-toggle="modal" data-target="#Modal2">Заказать
+                                    звонок</a>
                             </div>
                         </div>
                     </div>
@@ -110,8 +115,7 @@
                     <input type="text" class="user-input required" required name="user-name" placeholder="Имя">
                     <input type="text" class="user-input required" required name="user-phone"
                            placeholder="Номер телефона">
-                    <input type="text" class="user-input" name="user-text" placeholder="Удобное время для звонка">
-                    <button class="button button-white">Узнать условия акции</button>
+                    <button type="submit" class="button button-white">Узнать условия акции</button>
                     <div class="ch_wrapper">
                         <!-- можно поменять на type="radio" -->
                         <input id="user-check1" type="checkbox" name="user-check1" value="1" checked>
@@ -120,10 +124,11 @@
                     </div>
                     <input type="text" class="hidden" hidden value="Узнать условия акции (1 экран)">
                 </form>
-                <div class="bg-cloud"></div>
             </div>
-
+            <div class="bg-cloud"></div>
+            <button type="button" class="button button-white fs js-open-fs-form">Узнать условия акции</button>
         </div>
+
 
         <!-- **********************************************************************- -->
         <div class="separator"></div>
@@ -162,7 +167,7 @@
                     <button class="button  button-border" data-toggle="modal" data-target="#Modal">Узнать условия
                         акции
                     </button>
-                    <a href="#" class="link" data-toggle="modal" data-target="#Modal">Комплектация</a>
+                    <a href="car-kit.html" class="link" target="_blank">Комплектация</a>
                 </div>
             </div>
 
@@ -195,41 +200,7 @@
                     <button class="button  button-border" data-toggle="modal" data-target="#Modal">Узнать условия
                         акции
                     </button>
-                    <a href="#" class="link" data-toggle="modal" data-target="#Modal">Комплектация</a>
-                </div>
-            </div>
-
-            <div class="instock__block">
-                <p class="instock__img"><img src="img/auto1.png" alt=""></p>
-                <div class="instock__info">
-                    <h3>Lexus xl 350</h3>
-                    <table class="table table--instock">
-                        <tr>
-                            <td>Год выпуска</td>
-                            <td>2016</td>
-                        </tr>
-                        <tr>
-                            <td>Двигатель</td>
-                            <td>1.4 л. / 125 л.с. / Бензин турбонаддув</td>
-                        </tr>
-                        <tr>
-                            <td>КПП</td>
-                            <td>АКПП</td>
-                        </tr>
-                        <tr>
-                            <td>Привод</td>
-                            <td>Передний привод</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div class="instock__price">
-
-                    <p class="price">Цена: <span>968 000 руб.</span></p>
-                    <button class="button  button-border" data-toggle="modal" data-target="#Modal">Узнать условия
-                        акции
-                    </button>
-                    <a href="#" class="link" data-toggle="modal" data-target="#Modal">Комплектация</a>
+                    <a href="car-kit.html" class="link" target="_blank">Комплектация</a>
                 </div>
             </div>
 
@@ -263,7 +234,41 @@
                     <button class="button  button-border" data-toggle="modal" data-target="#Modal">Узнать условия
                         акции
                     </button>
-                    <a href="#" class="link" data-toggle="modal" data-target="#Modal">Комплектация</a>
+                    <a href="car-kit.html" class="link" target="_blank">Комплектация</a>
+                </div>
+            </div>
+
+            <div class="instock__block">
+                <p class="instock__img"><img src="img/auto1.png" alt=""></p>
+                <div class="instock__info">
+                    <h3>Lexus xl 350</h3>
+                    <table class="table table--instock">
+                        <tr>
+                            <td>Год выпуска</td>
+                            <td>2016</td>
+                        </tr>
+                        <tr>
+                            <td>Двигатель</td>
+                            <td>1.4 л. / 125 л.с. / Бензин турбонаддув</td>
+                        </tr>
+                        <tr>
+                            <td>КПП</td>
+                            <td>АКПП</td>
+                        </tr>
+                        <tr>
+                            <td>Привод</td>
+                            <td>Передний привод</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="instock__price">
+
+                    <p class="price">Цена: <span>968 000 руб.</span></p>
+                    <button class="button  button-border" data-toggle="modal" data-target="#Modal">Узнать условия
+                        акции
+                    </button>
+                    <a href="car-kit.html" class="link" target="_blank">Комплектация</a>
                 </div>
             </div>
         </div>
@@ -332,8 +337,7 @@
                     <div class="text3">Предварительное одобрение автокредита по самым выгодным ставкам от ведущих банков
                         страны
                     </div>
-                    <button class="button button-border" data-toggle="modal" data-target="#Modal">Заполнить анкету
-                    </button>
+                    <a href="#" class="button button-border">Заполнить анкету</a>
                 </div>
             </div>
         </div>
@@ -385,9 +389,30 @@
                     принять
                     правильное решение в пользу нашего сервисного центра
                 </div>
-                <button class="button button-border" data-toggle="modal" data-target="#Modal1">Оставить заявку на
-                    обслуживание
-                </button>
+                <a href="#" class="button button-border">Оставить заявку на
+                    обслуживание</a>
+            </div>
+        </div>
+        <!-- **********************************************************************- -->
+        <div class="studio-bg" id="link2">
+            <div class="studio container-fluid">
+                <h2 class="studio__title line-center">Студия Индивидуализации</h2>
+                <div class="text1">Если Вы настоящий ценитель индивидуального дизайна,
+                    то&nbsp;для&nbsp;вас работает Студия Индивидуализации Ярс-Моторс
+                </div>
+                <div class="text2">Широкий ассортимент технических аксессуаров открывает почти безграничные возможности
+                    для персонализации Вашего автомобиля. Независимо от того, какую задачу Вы поставите нашим
+                    специалистам: повысить приемистость Вашему автомобилю или придать дополнительный комфорт внутренней
+                    отделки, изменить очертания кузова – все Ваши пожелания будут учтены и реализованы
+                </div>
+                <a href="#" class="button button-border transparent">Узнать подробнее</a>
+                <div class="icons-list">
+                    <div class="item icon-1"></div>
+                    <div class="item icon-2"></div>
+                    <div class="item icon-3"></div>
+                    <div class="item icon-4"></div>
+                    <div class="item icon-5"></div>
+                </div>
             </div>
         </div>
         <!-- **********************************************************************- -->
@@ -426,7 +451,7 @@
         <!-- *************************** БЛОК ПОДВАЛ***************************************- -->
     </div> <!-- end wrapper-y -->
 
-    <footer class="container-fluid">
+    <footer class="container-fluid foter">
         <div class="main-footer">
             <a href="#" class="main-footer__logo">
                 <img src="img/logo-b.png" alt="">
