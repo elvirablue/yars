@@ -27,26 +27,28 @@ $(document).on('ready', function () {
     });
 
     function showFormFS() {
-        $('.btn-down').css({'left': '40px', 'right': 'auto'});
-        $('.js-open-fs-form').hide();
-        $('.first-screen-form').css('margin-left', '180px');
+        //$('.btn-down').css({'left': '40px', 'right': 'auto'});
+        //$('.js-open-fs-form').hide();
+        //$('.first-screen-form').css('margin-left', '180px');
+        $('.first-screen-form').toggleClass('active');
+        $('.btn-down').toggleClass('noactive');
     };
 
     $('.js-open-fs-form').click(function () {
         showFormFS();
     });
-    if ($(window).width() >= '992') {
-        setTimeout(function () {
-            showFormFS();
-        }, 5000);
-    };
-    $(window).resize(function() {
-        if ($(window).width() >= '992') {
-            setTimeout(function () {
-                showFormFS();
-            }, 5000);
-        }
-    });
+   //if ($(window).width() >= '992') {
+   //    setTimeout(function () {
+   //        showFormFS();
+   //    }, 5000);
+   //};
+   //$(window).resize(function() {
+   //    if ($(window).width() >= '992') {
+   //        setTimeout(function () {
+   //            showFormFS();
+   //        }, 5000);
+   //    }
+   //});
 
 
 $('.navbar .navbar-nav a, .btn-down').click(function () {

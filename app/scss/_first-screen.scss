@@ -139,16 +139,21 @@
       font-size: 2.5vw;
     }
     @include media-breakpoint-down(xs) {
-      padding-top: 60px;
+      padding-top: 30px;
       font-size: 12px;
     }
   }
   .btn-down {
     display: block;
+    opacity: 1;
     position: absolute;
     z-index: 1112;
     bottom: 215px;
     right: 40px;
+    transition: opacity 1s ease;
+    &.noactive {
+      opacity: 0;
+    }
     @include text-light(12px);
     line-height: 3;
     color: #fff;
@@ -184,7 +189,10 @@
   margin-left: 1000px;
   padding-top: 25px;
   padding-left: 80px;
-  transition: margin-left 0.5s ease-in;
+  transition: margin-left 0.3s ease;
+  &.active {
+    margin-left: 180px;
+  }
   .form-main {
     padding-top: 130px;
     position: relative;

@@ -5449,14 +5449,17 @@ a {
         font-size: 2.5vw; } }
     @media (max-width: 575.98px) {
       .first-screen .subtitle {
-        padding-top: 60px;
+        padding-top: 30px;
         font-size: 12px; } }
   .first-screen .btn-down {
     display: block;
+    opacity: 1;
     position: absolute;
     z-index: 1112;
     bottom: 215px;
     right: 40px;
+    -webkit-transition: opacity 1s ease;
+    transition: opacity 1s ease;
     font-family: 'circle-regular', Verdana, Geneva, sans-serif;
     font-size: 12px;
     line-height: 3;
@@ -5474,6 +5477,8 @@ a {
     cursor: pointer;
     -webkit-transition: opacity 0.1s ease;
     transition: opacity 0.1s ease; }
+    .first-screen .btn-down.noactive {
+      opacity: 0; }
     .first-screen .btn-down:hover {
       color: #fff;
       opacity: 1; }
@@ -5494,8 +5499,10 @@ a {
   margin-left: 1000px;
   padding-top: 25px;
   padding-left: 80px;
-  -webkit-transition: margin-left 0.5s ease-in;
-  transition: margin-left 0.5s ease-in; }
+  -webkit-transition: margin-left 0.3s ease;
+  transition: margin-left 0.3s ease; }
+  .first-screen-form.active {
+    margin-left: 180px; }
   .first-screen-form .form-main {
     padding-top: 130px;
     position: relative;
@@ -5632,6 +5639,21 @@ a {
       .form-main .user-input {
         max-width: 100%; } }
 
+.form-contact-bg {
+  background: url("../img/bg-form.jpg") no-repeat #000;
+  background-position: bottom center; }
+  @media (max-width: 1199.98px) {
+    .form-contact-bg {
+      background-position: top center;
+      background-size: cover; } }
+  @media (max-width: 991.98px) {
+    .form-contact-bg {
+      background-position: top left;
+      background-size: 1200px; } }
+  @media (max-width: 575.98px) {
+    .form-contact-bg {
+      background-size: 800px; } }
+
 .form-contact {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5647,9 +5669,7 @@ a {
           align-items: flex-start;
   height: auto;
   min-height: 626px;
-  position: relative;
-  background: url("../img/bg-form.jpg") no-repeat;
-  background-position: bottom center; }
+  position: relative; }
   @media (max-width: 1199.98px) {
     .form-contact {
       min-height: 550px; } }
@@ -6147,7 +6167,7 @@ table.table--modal2 tr td {
 .service-bg {
   min-height: 666px;
   background: url("../img/bg-service.jpg") no-repeat bottom center #fff;
-  background-size: auto;
+  background-size: cover;
   padding-bottom: 50px; }
   @media (max-width: 991.98px) {
     .service-bg {

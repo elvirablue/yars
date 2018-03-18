@@ -1,7 +1,7 @@
 .service-bg {
   min-height: 666px;
   background: url("../img/bg-service.jpg") no-repeat bottom center #fff;
-  background-size: auto;
+  background-size: cover;
   padding-bottom: 50px;
   @include media-breakpoint-down(md) {
     min-height: auto;
